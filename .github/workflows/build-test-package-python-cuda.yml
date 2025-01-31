@@ -18,7 +18,7 @@ jobs:
         cuda-version: ["116","121"]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.2.2
 
     - name: 'Fetch build script'
       run: |
@@ -100,7 +100,7 @@ jobs:
         cuda-version: ["116","121"]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.2.2
       with:
         path: "im"
 
@@ -173,7 +173,7 @@ jobs:
     needs:
       - build-linux-cuda-python-packages
       - build-windows-cuda-python-packages
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - name: Download Python Packages

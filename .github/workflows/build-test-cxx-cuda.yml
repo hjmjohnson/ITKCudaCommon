@@ -3,7 +3,7 @@ name: 'Build, Test ITKCudaCommon with CUDA'
 on: [push,pull_request]
 
 env:
-  itk-git-tag: "v5.4.0"
+  itk-git-tag: "v6.0a02"
 
 jobs:
   build-test-cxx:
@@ -23,7 +23,7 @@ jobs:
             cmake-build-type: "Release"
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.2.2
 
     - name: Install build dependencies
       run: |
